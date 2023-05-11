@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+.logo {
+    font: 30px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    border-bottom: 10px;
+    transition:all .55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+
+.profile {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #f3c6a1 0%, #c88b59 28.53%, #6f5036 75.52%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 19%;
+}
+
+.profile-text h5 {
+    color: white;
+}
+
+.profile-text h4 {
+    color: #ffcf8c;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.profile-text h1 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.profile-text p {
+    color: #ffcf8c;
+}
+
+.profile-text a {
+    display: inline-block;
+    color: white;
+    background: rgb(103, 70, 36);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.284);
+    margin-left: 10px;
+    padding: 10px 30px;
+    line-height: 18px;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 30;
+    transition: all 0.35s ease;
+}
+
+.profile-text a:hover {
+    background: #c88b59;
+    color: white;
+}
+
+.profileimage img {
+    width: 500px;
+    height: auto;
+}
+
+.profile-text a.ctaa {
+    background: #c88b5900;
+    border: solid #c88b59 1px;
+}
+
+.profile-text a.ctaa:hover {
+    background: #000000;
+    border: solid #c88b59 1px;
+}
+
+.profile-text a.ctaa i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all 0.35s ease;
+}
+
+.icons i:hover {
+    color: #ffcf8c;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: black;
+    border-radius: 30px;
+    transition: all 0.35s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: 0.2s;
+    }
+    .icons {
+        padding: 0 3%;
+        transition: 0.2s;
+    }
+    .scroll-down {
+        right: 3%;
+        transition: 0.2s;
+    }
+}
+
+@media (max-width: 1340px) {
+    .profileimage img {
+        width: 100%;
+        height: auto;
+    }
+    .profile-text h1 {
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .prfile-text h5 {
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+        transition: 0.2s;
+    }
+    .profile-text {
+        padding-top: 115px;
+    }
+    .profileimage img {
+        width: 560px;
+        height: auto;
+    }
+    .profile {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 990px) {
+    #menu-icon {
+        display: block;
+    }
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 30vh;
+        background-color: #c88b59;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all 0.55s ease;
+    }
+    .navlist a {
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+    .navlist.open {
+        right: 0;
+    }
+} 
+
+@media (max-width: 680px) {
+    .profileimage img {
+        width: 100%;
+        height: auto;
+    }
+}
+
